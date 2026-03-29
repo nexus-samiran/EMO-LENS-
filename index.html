@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +47,7 @@
       overflow-x:hidden;
     }
 
-    /* ─── Grain overlay ─── */
+    /* Grain overlay */
     body::before{
       content:"";
       position:fixed;
@@ -64,7 +65,7 @@
       z-index:1;
     }
 
-    /* ─── TOPBAR ─── */
+    /* TOPBAR */
     .topbar{
       display:flex;
       justify-content:space-between;
@@ -116,13 +117,22 @@
       font-weight:300;
     }
 
+    /* Byline */
+    .brand-byline{
+      font-size:0.72rem;
+      font-weight:600;
+      color:#ffffff;
+      margin-top:3px;
+      letter-spacing:0.01em;
+    }
+
     .topbar-right{
       display:flex;
       align-items:center;
       gap:10px;
     }
 
-    /* ─── HERO STRIP ─── */
+    /* HERO STRIP */
     .hero-strip{
       background: linear-gradient(120deg, rgba(45,232,160,0.07) 0%, rgba(63,165,255,0.07) 100%);
       border:1px solid var(--border);
@@ -173,7 +183,7 @@
       flex-shrink:0;
     }
 
-    /* ─── BUTTONS ─── */
+    /* BUTTONS */
     button{
       border:none;
       cursor:pointer;
@@ -219,7 +229,7 @@
       background:rgba(255,96,96,0.2);
     }
 
-    /* ─── MAIN WORKSPACE ─── */
+    /* MAIN WORKSPACE */
     .workspace{
       display:grid;
       grid-template-columns: 1.5fr 0.85fr 0.6fr;
@@ -235,7 +245,7 @@
       box-shadow:var(--shadow);
     }
 
-    /* ─── CAMERA PANEL ─── */
+    /* CAMERA PANEL */
     .camera-panel{
       padding:18px;
     }
@@ -349,7 +359,7 @@
 
     canvas{ z-index:3; }
 
-    /* ─── BOTTOM STATS ─── */
+    /* BOTTOM STATS */
     .bottom-stats{
       margin-top:14px;
       display:grid;
@@ -380,14 +390,14 @@
       font-weight:600;
     }
 
-    /* ─── RIGHT COL ─── */
+    /* RIGHT COL */
     .right-col{
       display:flex;
       flex-direction:column;
       gap:16px;
     }
 
-    /* ─── EMOTION CARD ─── */
+    /* EMOTION CARD */
     .emotion-card{
       padding:18px;
     }
@@ -469,7 +479,7 @@
       transition:width .25s ease;
     }
 
-    /* ─── HISTORY CARD ─── */
+    /* HISTORY CARD */
     .history-card{
       padding:18px;
     }
@@ -494,7 +504,7 @@
       background:rgba(255,255,255,0.10);
     }
 
-    /* ─── CONTROL PANEL ─── */
+    /* CONTROL PANEL */
     .control-panel{
       padding:18px;
       background:rgba(8,17,32,0.92);
@@ -573,7 +583,7 @@
       box-shadow: var(--glow-green);
     }
 
-    /* ─── ANIMATIONS ─── */
+    /* ANIMATIONS */
     @keyframes fadeUp{
       from{ opacity:0; transform:translateY(14px); }
       to{ opacity:1; transform:translateY(0); }
@@ -583,7 +593,7 @@
     .hero-strip{ animation:fadeUp 0.45s 0.05s ease both; }
     .workspace{ animation:fadeUp 0.5s 0.1s ease both; }
 
-    /* ─── RESPONSIVE ─── */
+    /* RESPONSIVE */
     @media (max-width:1280px){
       .workspace{
         grid-template-columns:1fr 1fr;
@@ -630,11 +640,10 @@
 <body>
   <div class="app">
 
-    <!-- ─── TOPBAR ─── -->
+    <!-- TOPBAR -->
     <div class="topbar">
       <div class="brand">
         <div class="logo">
-          <!-- eye icon -->
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 12C1 12 5 5 12 5C19 5 23 12 23 12C23 12 19 19 12 19C5 19 1 12 1 12Z" stroke="#04120e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <circle cx="12" cy="12" r="3" fill="#04120e"/>
@@ -643,11 +652,12 @@
         <div class="brand-text">
           <h1>EmoLens</h1>
           <p>Browser-native face tracking &amp; emotion dashboard</p>
+          <div class="brand-byline">An exclusive website by Samiran Pande.</div>
         </div>
       </div>
     </div>
 
-    <!-- ─── HERO STRIP ─── -->
+    <!-- HERO STRIP -->
     <div class="hero-strip">
       <div class="hero-text">
         <h2>Track expressions, age, gender &amp; landmarks — live.</h2>
@@ -660,7 +670,7 @@
       </div>
     </div>
 
-    <!-- ─── WORKSPACE ─── -->
+    <!-- WORKSPACE -->
     <section class="workspace">
 
       <!-- Camera Panel -->
